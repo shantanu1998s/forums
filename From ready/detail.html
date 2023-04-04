@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--NavBar Section-->
+        <div class="login_singup">
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="detail.html">Detail</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <div class="brand">My Forum</div>
+        
+        </div>
+        <div class="login_form">
+            <a id="log" href="login.html" style="color:rgb(20, 5, 234);">Login</a>        </div>
+    </div>
+        <!--SearchBox Section-->
+        <div class="search-box">
+            <div>
+                <select name="" id="">
+                    <option value="Everything">Everything</option>
+                    <option value="Titles">Titles</option>
+                    <option value="Descriptions">Descriptions</option>
+                </select>
+                <input type="text" name="q" placeholder="search ...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    <div class="container" id="cont">
+        
+        <!--Comments Section-->
+        <div class="comments-container" id="comments">
+            <!-- <div class="body">
+                <div class="authors">
+                    <div class="username" id="auther_name" style="color: red;">AnotherUse</div>
+                    <div id="title_cont">Role</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+                    <div>Posts: <u>455</u></div>
+                    <div>Points: <u>4586</u></div>
+                </div>
+                <div class="content">
+                    <h5 id="msg_cont">Just a comment of the above random topic.</h5>
+                       <p id="reply_msg"> more and nothing less.</p>
+                    <br>
+                    <br>
+                    <div class="comment">
+                        
+                        <button onclick="showReply()">Reply</button>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="comment-area hide" id="reply-area">
+                <textarea name="reply" id="" placeholder="reply here ... "></textarea>
+                <input type="submit" value="submit">
+            </div> -->
+        </div>
+        <!--Reply Area-->
+        
+    </div>
+
+        <div id="content">
+            <form>
+              <label for="username">Name:</label>
+              <input type="text" id="username" name="username" required><br>
+                
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title" required><br>
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message"></textarea><br>
+      
+              <button type="submit" id="btn">Post</button>
+            </form>
+            <!-- <div id="messages">
+             messages will be displayed here 
+            </div>  -->
+          </div>
+    
+    <footer>
+        <span>&copy;  Shantannu | All Rights Reserved</span>
+    </footer>
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
