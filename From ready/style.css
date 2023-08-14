@@ -1,26 +1,31 @@
 /* ########################################### */
 /*                 Global                      */
 /* ########################################### */
-*{
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html{
-    font-size: 14x;
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
     font-family: 'Titillium Web', sans-serif;
-    background-color:rgb(246, 237, 237);
-    color:#FEFEFE;
+    background-color: #e5ebf0;
 }
 
-a{
-    color:#FF0042;
-    font-weight: bolder;
-    text-decoration: none;
-}
 
 h1{
     font-size:16px;
     font-weight: bolder;
+}
+
+a{
+    text-decoration: none
+}
+.hide{
+    display: none;
 }
 
 
@@ -75,103 +80,14 @@ h1{
 }
 
 
-/* For the smartphones */
-@media screen and (max-width: 460px) {
-    .container{
-        margin: 10px;
-        padding: 10px;
-    }
-
-    .subforum-row{
-        display: grid;
-        grid-template-columns: 25% 75%;
-        grid-template-rows: 65% 35%;
-    }
-
-    .subforum-devider{
-        display: block;
-        border: 0;
-        height: 1px;
-        background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
-    }
-
-    
-
-  }
-
-/* For the tablets */
-@media screen and (min-width: 460px) and (max-width: 1024px) {
-    .container{
-        margin: 15px;
-        padding: 15px;
-    }
-
-    .subforum-row{
-        display: grid;
-        grid-template-columns: 10% 60% 10% 20%;
-    }
-
-    .subforum-icon i{
-        font-size: 35px;
-    }
-
-    html{
-        font-size: 14px;
-    }
-
-    h1{
-        font-size: 16px;
-    }
-
-  }
 /*   Header Section    */
 
 header{
     margin-inline: 10px;
 }
   /* Nav Bar styles */
-.navbar{
-    display:flex;
-    align-items: center;
-}
-.navigation{
-    background-color:#52057b;
-    padding: 10px;
-    width: 65%;
-    display: inline-block;
-    border-radius: 5px;
-    max-height: 80px;
-    margin-right:10px;
-}
 
-.close-icon i{
-    font-size:60px;
-    float: left;
-    cursor: pointer;
-}
 
-.nav-list{
-    list-style-type:none;
-    overflow: hidden;
-}
-
-.nav-item a{
-    float: right;
-    display:block;
-    text-align: center;
-    margin-inline: 20px;
-    font-size: 20px;
-    padding: 10px;
-    color:#fff;
-}
-
-.nav-item a:hover{
-    background-color: rgb(0,0,0,0.1);
-}
-
-.hide{
-    display: none;
-}
 
 .bar-icon{
     font-size: 60px;
@@ -189,42 +105,27 @@ header{
 .brand{
     font-size:60px;
     display: inline-block;
-    font-family:aquire;
+    font-family:aquire;color: red;
 }
-
-/*Navbar for the smartphones*/
-@media screen and (max-width: 460px){
-    .navigation{
-        max-height: auto;
-    }
-    
-    .close-icon i{
-        font-size:30px;
-    }
-    
-    .nav-item a{
-        float:left;
-        display:inline;
-        margin-inline: 3px;
-        font-size: 10px;
-        padding: 5px;
-    }
-    
-    
-    .bar-icon{
-        font-size: 30px;
-    }
- 
+ @media screen and (max-width:500px){
     .brand{
-        font-size:20px;
+        font-size: 25px;
     }
-}
+    .login_singup{
+        font-size: 25px;
+        color: red;
+    }
+    form input{
+        width: 90%;
+    }
+ }
+
 
   /* Search Box styles */
 .search-box{
     border: solid 1px #52057b;
-    margin-top: 20px;
-    padding: 40px;
+    margin-top: 1rem;
+    padding: 1rem;
     display:flex;
     justify-content: center;
     box-shadow:1px 2px 3px #52057b;
@@ -251,13 +152,8 @@ header{
 }
 
 /* search box for smrtphones */
-@media screen and (max-width: 460px){
-    .search-box input, .search-box button, .search-box select{
-        min-width: 300px;
-        margin-top: 5px;
-    }    
+   
 
-}
 
 /* forum info Styling */
 .forum-info{
@@ -276,6 +172,7 @@ footer{
     padding: 20px;
     background-color:  #52057b;
     display: block;
+    color: red;
     text-align: center;
 }
 
@@ -296,7 +193,6 @@ footer{
 .authors{
     flex: 20%;
     font-size: 20px;
-    background-color: #333;
     padding: 10px;
 }
 h5{
@@ -313,7 +209,7 @@ p{
 .body{
     display: flex;
     flex-wrap: wrap;
-    background-color: #131415;
+    flex-direction: column;
     padding: 10px;
     margin-top: 5px;
     border-radius: 10px;
@@ -373,7 +269,7 @@ p{
     padding: 10px;
   }
   #message{
-    width: 500px;
+    width: 90%;
     border-radius: 5px;
   }
   form {
@@ -383,6 +279,7 @@ p{
   label {
     display: block;
     font-weight: bold;
+    color: #ff4d4f;
   }
   
   textarea {
@@ -414,7 +311,7 @@ p{
 
 form input{
     height: 50px;
-    width: 300px;
+    width: 30%;
     border-radius: 5px;
 }
 form label{
@@ -450,7 +347,6 @@ margin-right: 10px;
 .content{
   padding: 25px;
   text-align: justify;
-  background-color: #383737;
 }
 /* form textarea{
     border-radius: 5px;
@@ -465,4 +361,17 @@ margin-right: 10px;
 
 .login_form{
   margin-right: 20px;
+}
+
+.userInput{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.replyTextArea{
+    border-radius: 5px;
+    font-size: 20px;
 }

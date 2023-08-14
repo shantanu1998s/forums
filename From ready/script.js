@@ -1,8 +1,6 @@
 const loginForm = document.querySelector('.login-container form');
 const login=document.querySelector(".login-container");
 
-// Login form
-
 if(loginForm)
 loginForm.addEventListener('submit', event => {
   event.preventDefault();
@@ -14,7 +12,7 @@ loginForm.addEventListener('submit', event => {
    if(email==get_email && password==get_password)
    {
       alert("You have login succefully");
-      location.replace("detail.html")
+      location.replace("index.html")
    }
    else{
     alert("You have entered wrong input");
@@ -55,7 +53,7 @@ signupForm.addEventListener('submit', event => {
   console.log(localStorage.getItem("name"))
     const get_name=localStorage.getItem("name");
     const myArray = get_name.split(" ");
-     log.innerHTML="Hello "+myArray[0];
+     log.innerHTML=myArray[0];
  }
 
 

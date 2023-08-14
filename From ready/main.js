@@ -19,21 +19,39 @@ function showIconBar(){
    const doesReplpyInputExists = document.querySelector(".replyTextArea");
     if(doesReplpyInputExists === null){
      const replpyInput = document.createElement("textarea");
+     const userInput = document.createElement("input");
+     const userName= document.createElement("p");
+     userName.innerHTML="Name"
      replpyInput.classList.add("replyTextArea");
+     userInput.classList.add("userInput");
+     userName.classList.add("userName");
     // replpyInput.autofocus = true; 
      const container = document.querySelector(`div[id="${comment}"]`);
      container.insertAdjacentElement("afterbegin",replpyInput);
+     container.insertAdjacentElement("afterbegin",userInput);
+     container.insertAdjacentElement("afterbegin",userName);
     }else{
       const replyInput = document.querySelector(".replyTextArea");
+      const userInput = document.querySelector(".userInput");
+      const userName = document.querySelector(".userName");
       const replyInputValue = replyInput.value;
+      const userInputValue = userInput.value;
       // const afterElem = document.querySelector(`div[id="${comment}"]`); // div[id="${comment}"] 
       const afterElem = document.getElementById(comment); // div[id="${comment}"]
       const replyElem  = document.createElement("div");
-      replyElem.textContent = replyInputValue;
+      const userNameElem = document.createElement("p");
+      const userReplyElem = document.createElement("p");
+      userNameElem.textContent = userInputValue;
+      userReplyElem.textContent = replyInputValue;
+      replyElem.append(userNameElem,userReplyElem)
+      // replyElem.textContent = replyInputValue;
       replyElem.classList.add("postReply");
       afterElem.insertAdjacentElement("beforebegin",replyElem);
       //console.log(replyInputValue);
+      userName.remove();
       replyInput.remove();
+      userInput.remove();
+      userName.remove();
    }
    
   /* 
@@ -137,7 +155,9 @@ form.addEventListener('submit', event => {
     button.id= randomid;
     button.dd=randomid2;
     button.dy=randomid3;
-    button.setAttribute("onclick","showReply(id,dd,dy)")
+    console.log("look here",button.id,button.dd,button.dy)
+    button.addEventListener("click",() => showReply(button.id,button.dd,button.dy))
+    // button.setAttribute("onclick","showReply(id,dd,dy)")
     div_button.appendChild(button);
     div_content.appendChild(div_h5)
     div_content.appendChild(div_reply);

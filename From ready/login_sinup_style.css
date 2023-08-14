@@ -1,5 +1,5 @@
 body{
-  background-color: red;
+  background-color: rgb(23, 201, 237);
 }
 header {
     background-color: #333;
@@ -16,7 +16,7 @@ header {
   }
   h1{
     margin-left: 20px;
-    color: #00006362;
+    color: white;
   }
   #content {
     margin: 20px;
@@ -67,11 +67,11 @@ header {
 
   .login-container,
 .signup-container {
-  margin: 50px auto;
+  margin: 0px auto;
   padding: 20px;
   border: 1px solid #ccc;
   max-width: 400px;
-  background-color: #3d8fe7;
+  background-color: #4fc2e5;
   color: white;
   border-radius: 5px;
 }
