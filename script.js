@@ -48,14 +48,15 @@ signupForm.addEventListener('submit', event => {
 
  const log=document.getElementById("log");
 
- if(log){
-  console.log("i m in index now")
-  console.log(localStorage.getItem("name"))
-    const get_name=localStorage.getItem("name");
-    const myArray = get_name.split(" ");
-     log.innerHTML=myArray[0];
- }
-
+ if (log) {
+  console.log("I'm in index now");
+  
+  const get_name = localStorage.getItem("name");
+  const myArray = get_name.split(" ");
+  const newHtml = `<img class="icon_img" src="login_icon.png" alt="No Image">${myArray[0]}`;
+  
+  log.innerHTML = newHtml;
+}
 
 
 

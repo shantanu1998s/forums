@@ -124,7 +124,8 @@ header{
   /* Search Box styles */
 .search-box{
     border: solid 1px #52057b;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    margin: 20px;
     padding: 1rem;
     display:flex;
     justify-content: center;
@@ -200,7 +201,7 @@ h5{
     margin: 3px;
 }
 p{
-    font-size: 18px;
+    font-size: 25px;
 }
 .content{
     flex: 80%;
@@ -375,3 +376,36 @@ margin-right: 10px;
     border-radius: 5px;
     font-size: 20px;
 }
+
+@media screen and (max-width:900px){
+     form input{
+        width: 90%;
+     }
+     a{
+        font-size: smaller;
+        display: flex;
+     }
+     .icon_img{
+        max-width: 40px;
+        max-height: 40px;
+      }
+}
+
+.icon_img{
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  a{
+    display: flex;
+  }
+
+  .repler_name{
+    font-family: sans-serif;
+  }
+
+
+  .question{
+    font-family: 'aquire';
+
+  }

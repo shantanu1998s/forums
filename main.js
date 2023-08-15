@@ -40,8 +40,9 @@ function showIconBar(){
       const afterElem = document.getElementById(comment); // div[id="${comment}"]
       const replyElem  = document.createElement("div");
       const userNameElem = document.createElement("p");
+      userNameElem.classList.add("repler_name");
       const userReplyElem = document.createElement("p");
-      userNameElem.textContent = userInputValue;
+      userNameElem.textContent = `Name:- ${userInputValue}`;
       userReplyElem.textContent = replyInputValue;
       replyElem.append(userNameElem,userReplyElem)
       // replyElem.textContent = replyInputValue;
@@ -146,6 +147,7 @@ form.addEventListener('submit', event => {
   
     // value putting in content class
     div_h5.innerHTML=message;
+    div_h5.classList.add("question");
     div_reply.innerText="Reply:-";
     button.innerHTML="Reply"
     div_content.classList.add("content")
