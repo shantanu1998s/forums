@@ -103,14 +103,20 @@ label {
   margin-bottom: 10px;
 }
 
+
 input[type="email"],
 input[type="password"],
 input[type="text"] {
-  padding: 10px 100px;
+  padding: 10px 5px;
   margin-bottom: 20px;
   border: none;
   border-radius: 3px;
 }
+
+/* input{
+  padding: 10px;
+  border-radius: 5px;
+} */
 
 button {
   padding: 10px;
